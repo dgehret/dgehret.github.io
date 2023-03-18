@@ -5,4 +5,4 @@ document.addEventListener("DOMContentLoaded", function() {
     hamburgerMenu.addEventListener("click", function() {
         sidePanel.classList.toggle("visible");
     });
-}); // added closing bracket for function
+}); 
