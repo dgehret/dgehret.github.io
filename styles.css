@@ -12,7 +12,12 @@ body {
     color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -36,7 +41,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4;ggd
     border-bottom: 1px solid #ddd;
     position: relative;
     z-index: 100;
@@ -49,7 +54,10 @@ header {
     color: #333;
 }
 
-/* Side panel */
+.hamburger-menu:hover {
+    color: #666;
+}
+
 .side-panel {
     position: fixed;
     top: 0;
@@ -60,6 +68,18 @@ header {
     padding: 1rem;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
+    z-index: 101;
+}
+
+.nav-menu.visible {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    z-index: 98;
+
 }
 
 .side-panel.visible {
@@ -72,37 +92,35 @@ header {
 
 .nav-menu ul {
     display: flex;
+    flex-direction: column;
 }
 
 .nav-menu li {
     list-style: none;
-    margin-right: 1rem;
     margin-bottom: 1rem;
 }
 
 .nav-menu a {
     display: block;
     padding: 0.5rem;
-}
-
-.profile-links {
-    display: flex;
-    align-items: center;
-}
-
-.profile-links a {
-    margin-left: 1rem;
-    font-size: 1.5rem;
     color: #333;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    color: #666;
+}
+
+
+
+.profile-links i {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .profile-links a:hover {
     color: #666;
-}
-
-.profile-links i {
-    margin-right: 0.5rem;
 }
 
 main {
@@ -116,12 +134,32 @@ footer {
     text-align: center;
 }
 
+/*background image */
+.parallax {
+    background-image: url('image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .parallax-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+
 /* Responsive */
 @media (max-width: 768px) {
     .hamburger-menu {
         display: block;
     }
-    
+
     .profile-links {
         margin-left: auto;
     }
@@ -147,6 +185,10 @@ footer {
         margin-bottom: 1rem;
     }
 }
+
+/* about page */
+
+  
 
 /* Skills */
 .skills ul {
