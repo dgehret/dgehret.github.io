@@ -47,7 +47,6 @@ header {
     cursor: pointer;
     font-size: 1.5rem;
     color: #333;
-    margin-left: auto;
 }
 
 /* Side panel */
@@ -79,7 +78,6 @@ header {
     list-style: none;
     margin-right: 1rem;
     margin-bottom: 1rem;
-
 }
 
 .nav-menu a {
@@ -89,6 +87,7 @@ header {
 
 .profile-links {
     display: flex;
+    align-items: center;
 }
 
 .profile-links a {
@@ -121,10 +120,10 @@ footer {
 @media (max-width: 768px) {
     .hamburger-menu {
         display: block;
-        
     }
-    .skills ul {
-        flex-direction: column;
+    
+    .profile-links {
+        margin-left: auto;
     }
 
     .nav-menu {
@@ -148,6 +147,7 @@ footer {
         margin-bottom: 1rem;
     }
 }
+
 /* Skills */
 .skills ul {
     display: flex;
